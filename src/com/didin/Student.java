@@ -8,11 +8,11 @@ public class Student implements College {
 	
 	private Schedule schedule;
 	
-	@Autowired
-	public Student(Schedule schedule) {
-		this.schedule = schedule;
-		
-	}
+//	@Autowired
+//	public Student(Schedule schedule) {
+//		this.schedule = schedule;
+//		
+//	}
 
 
 
