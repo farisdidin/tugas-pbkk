@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" >
+        
+          <!-- day, place, course -->
+       <bean id="sch1" class="com.didin.Schedule" >
+       		<property name="day" value="Monday" />
+       		<property name="place" value="IF - 120" />
+       		<property name="course" value="Cloud Computing" />
+       		
+       </bean>
+        
+        <!-- name, gender, schedule -->
+        <bean id="lec1" class="com.didin.Lecturer" >
+        	<property name="name" value="Rohmat" /> 
+        	<property name="gender" value="Male" /> 
+        	<property name="schedule" ref="sch1" /> 
+        	<!-- <constructor-arg ref="sch1" /> -->
+        </bean>
+        
+        <bean id="stu1" class="com.didin.Student" >
+        	<property name="schedule" ref="sch1" />
+        </bean>
+      
+
+</beans>
